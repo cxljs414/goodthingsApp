@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/hongbao_root"
+    tools:context="com.goodthings.app.activity.registHongbao.RegistHongBaoActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg_registhongb">
+
+        <RelativeLayout
+            android:id="@+id/hongbao_topback"
+            android:layout_width="@dimen/topbar_height"
+            android:layout_height="@dimen/topbar_height"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="?attr/actionModeCloseDrawable" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="初次见面,好事发生送您见面红包"
+                android:textSize="16sp"
+                android:textColor="@color/grey_333333"/>
+
+            <TextView
+                android:id="@+id/regist_hb_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="1.34元"
+                android:textSize="25sp"
+                android:textColor="@color/grey_333333"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="已存入钱包"
+                android:textSize="14sp"
+                android:textColor="@color/grey_333333"/>
+            
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_width="280dp"
+                android:layout_height="150dp"
+                android:gravity="center_horizontal"
+                android:background="@color/grey_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="每天分享送金币"
+                    android:textSize="16sp"
+                    android:textColor="@color/grey_333333"/>
+
+                <ImageView
+                    android:id="@+id/registhb_share"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/registhb_share"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="分享到微信群，好友点击越多，拆红包得到的越多"
+                    android:textSize="11sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

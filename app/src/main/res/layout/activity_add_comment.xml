@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.addComment.AddCommentActivity">
+
+    <include layout="@layout/top_bar" android:id="@+id/addcomment_topbar"/>
+
+    <LinearLayout
+        android:layout_below="@id/addcomment_topbar"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/com_margin">
+            <ImageView
+                android:id="@+id/addcomment_image"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_marginLeft="@dimen/com_margin"
+                tools:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/addcomment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/com_margin"
+                android:layout_toRightOf="@id/addcomment_image"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                tools:text="标题"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/addcomment_count"
+                android:layout_below="@id/addcomment_title"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/addcomment_image"
+                android:layout_marginLeft="10dp"
+                android:textSize="13sp"
+                tools:text="标题"
+                />
+
+            <TextView
+                android:id="@+id/addcomment_oneprice"
+                android:layout_below="@id/addcomment_count"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/addcomment_image"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                tools:text="标题"
+                android:textColor="@color/red_ff4949"
+                />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/com_margin"
+            android:layout_marginRight="@dimen/com_margin"
+            android:gravity="right">
+            <TextView
+                android:id="@+id/addcomment_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_102"
+                android:textSize="13sp"
+                android:text="￥32.0"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="@dimen/com_margin"
+            android:background="@color/public_background_color"/>
+
+        <EditText
+            android:id="@+id/addcomment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/com_margin"
+            android:hint="这次服务您还满意吗？有什么喜欢和不足，请分享给想买的小伙伴吧"
+            android:text=""
+            android:background="@color/public_background_color"
+            android:padding="@dimen/com_margin"
+            android:lines="8"
+            android:textSize="13sp"
+            android:gravity="top"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/public_background_color"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/addcomment_commit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/red_ff4949"
+        android:layout_alignParentBottom="true"
+        android:text="发布评价"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:textColor="@color/white"/>
+</RelativeLayout>

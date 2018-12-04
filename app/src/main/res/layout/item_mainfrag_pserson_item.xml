@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp">
+    <RelativeLayout
+        android:id="@+id/item_mainfrag_person_root"
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_corner_5"
+        android:paddingBottom="10dp">
+        <com.goodthings.app.view.RoundAngleImageView
+            android:id="@+id/item_mainfrag_person_image"
+            android:layout_width="114dp"
+            android:layout_height="114dp"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/item_mainfrag_person_name"
+            android:layout_below="@id/item_mainfrag_person_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/grey_333333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/item_mainfrag_person_collect_bt"
+            android:layout_below="@id/item_mainfrag_person_name"
+            android:layout_marginTop="10dp"
+            android:layout_width="77dp"
+            android:layout_height="27dp"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:text="关注"
+            android:background="@drawable/bgredcorner10"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

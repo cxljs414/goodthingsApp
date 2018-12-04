@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="apply_aftersale_type">
+        <item>我要退货退款</item>
+        <item>我要退款（无需退货）</item>
+    </string-array>
+    
+    <string-array name="apply_aftersale_status">
+        <item>未收到货</item>
+        <item>已收到货</item>
+    </string-array>
+
+    <string-array name="apply_aftersale_reason">
+        <item>收到物品破损、污渍</item>
+        <item>多拍、拍错、不想要</item>
+        <item>质量问题</item>
+        <item>货物与描述不符</item>
+        <item>买家发错货</item>
+        <item>其他</item>
+    </string-array>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:scaleType="center"
+            android:src="@mipmap/menu_nomal"/>
+        <RelativeLayout
+            android:id="@+id/home_menu_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/home_menu_msg_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/home_msg_nomal"
+                />
+            <ImageView
+                android:id="@+id/home_menu_msg_biaoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/red_point"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_below="@id/home_menu_msg_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="消息"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/home_menu_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/home_menu_scan_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/home_scan_nomal"
+                />
+
+            <TextView
+                android:layout_below="@id/home_menu_scan_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:text="扫码"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

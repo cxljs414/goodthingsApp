@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_prodcrowd_root"
+    android:background="@color/white"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/item_prodcrowd_prodimage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="235dp"
+        android:layout_below="@id/prodcrowd_topbar">
+
+        <ImageView
+            android:id="@+id/item_prodcrowd_prodimage"
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/qrcode_img"/>
+
+        <TextView
+            android:id="@+id/item_prodcrowd_state"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_redff4949_corner_5"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            tools:text="进行中"
+            />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/item_prodcrowd_prodimage_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:id="@+id/item_prodcrowd_support_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textSize="11sp"
+                android:text="已筹款"/>
+            <TextView
+                android:id="@+id/item_prodcrowd_sale_amt"
+                android:layout_toLeftOf="@id/item_prodcrowd_support_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                tools:text="￥2423"
+                android:textSize="18sp"
+                android:textColor="@color/grey_333333"
+                />
+            <TextView
+                android:id="@+id/item_prodcrowd_title"
+                android:layout_toLeftOf="@id/item_prodcrowd_sale_amt"
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lines="1"
+                tools:text="四川原产自酿纯高粱酒"
+                android:gravity="center_vertical"
+                android:textColor="@color/grey_333333"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_prodcrowd_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="少喝酒，喝好酒"
+            />
+
+        <ProgressBar
+            android:id="@+id/item_prodcrowd_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="15dp"
+            tools:progress="50"
+            style="@style/crowdprogress"
+            />
+
+        <TextView
+            android:id="@+id/item_prodcrowd_progress_percent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="23%"
+            android:gravity="right"
+            android:textColor="@color/orange_e47e23"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <TextView
+                android:id="@+id/item_prodcrowd_market_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:text="市场价：790元"
+                android:textColor="@color/grey_153"
+                android:textSize="12sp"
+                />
+            <TextView
+                android:id="@+id/item_prodcrowd_corwd_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                tools:text="预购价：329元"
+                android:textColor="@color/grey_333333"
+                android:textSize="13sp"
+                />
+            <TextView
+                android:id="@+id/item_prodcrowd_crowd_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                tools:text="预购数量：1000件"
+                android:textColor="@color/grey_333333"
+                android:textSize="13sp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/grouppay_root">
+    <include android:id="@+id/grouppay_topbar" layout="@layout/top_bar"/>
+    <LinearLayout
+        android:layout_below="@id/grouppay_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context="com.goodthings.app.activity.grouppay.OrderPayActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/grouppay_address_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/next_bt"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/grouppay_address_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/orderpay_address"/>
+
+
+
+            <RelativeLayout
+                android:id="@+id/grouppay_address_no"
+                android:layout_toRightOf="@id/grouppay_address_icon"
+                android:layout_toLeftOf="@id/grouppay_address_next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请填写联系方式和地址"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/grouppay_address_yes"
+                android:layout_toRightOf="@id/grouppay_address_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/grouppay_address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="吴晓静"
+                    android:textSize="14sp"
+                    android:textColor="@color/grey_333333"
+                    />
+
+                <TextView
+                    android:id="@+id/grouppay_address_phone"
+                    android:layout_toRightOf="@id/grouppay_address_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12545848965"
+                    android:textSize="14sp"
+                    android:textColor="@color/grey_333333"
+                    />
+
+                <TextView
+                    android:id="@+id/grouppay_address_detail"
+                    android:layout_below="@id/grouppay_address_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="北京市西三环红木街"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey_102"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_ffe9e9ea"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/grouppay_prod_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/orderpay_prod"/>
+
+
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/grouppay_prod_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/grouppay_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_333333"
+                    android:textSize="15sp"
+                    tools:text="x 1"/>
+                <TextView
+                    android:id="@+id/grouppay_title"
+                    android:layout_toLeftOf="@id/grouppay_count"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="四川原产自酿纯高粱酒"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_333333"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_ffe9e9ea"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/grouppay_pay_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/orderpay_pay"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/grouppay_pay_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+                <LinearLayout
+                    android:id="@+id/grouppay_pay_layou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:id="@+id/grouppay_realpay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/red_ff4949"
+                        android:textSize="15sp"
+                        tools:text="￥68元"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/grey_153"
+                        android:textSize="12sp"
+                        android:text="免邮费"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_toLeftOf="@id/grouppay_pay_layou"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="实付款"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_333333"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_ffe9e9ea"/>
+
+        <TextView
+            android:id="@+id/grouppay_commit"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_redff4949_corner_5"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+

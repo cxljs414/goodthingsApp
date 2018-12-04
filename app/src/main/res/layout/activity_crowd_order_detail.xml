@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.crowdorderdetail.CrowdOrderDetailActivity">
+
+    <include android:id="@+id/cfodetail_topbar" layout="@layout/top_bar"/>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cfodetail_topbar"
+        android:visibility="gone">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/cfodetail_toptip"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/gray_239"
+            tools:text="58分11秒后未支付，此订单将自动关闭"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:lines="1"
+            android:textColor="@color/gray_89"/>
+
+        <LinearLayout
+            android:id="@+id/cforderdetail_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:gravity="center">
+                <com.goodthings.app.view.CustomCircleProgressBar
+                    android:id="@+id/cfodetail_progressbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:direction="top"
+                    app:max_progress="100"
+                    app:outside_color="@color/orange_239"
+                    app:outside_radius="45dp"
+                    app:progress="0"
+                    app:progress_text_color="@color/orange_239"
+                    app:progress_text_size="18sp"
+                    app:progress_width="8dp" />
+                <com.goodthings.app.view.CustomCircleProgressBar
+                    android:id="@+id/cfodetail_progressbar_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:direction="top"
+                    app:max_progress="100"
+                    app:outside_color="@color/grey_a8a8a8"
+                    app:outside_radius="45dp"
+                    app:progress="0"
+                    app:progress_text_color="@color/grey_a8a8a8"
+                    app:progress_text_size="18sp"
+                    app:progress_width="8dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cfodetail_step"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="57dp"
+                android:layout_marginRight="57dp"
+                android:src="@mipmap/cforderdetail_imag1"
+                android:layout_marginBottom="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cforderdetail_fail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/cforderdetail_fail_image"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                tools:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/cforderdetail_fail_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitCenter"
+                tools:text="预购没有达成，退款中"
+                android:textColor="@color/grey_333333"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cforderdetail_wuliu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_white"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+                <ImageView
+                    android:id="@+id/cforderdetail_wuliu_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/wuliuxinxi"/>
+
+                <TextView
+                    android:id="@+id/cforderdetail_wuliu_company"
+                    android:layout_toRightOf="@id/cforderdetail_wuliu_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/cforderdetail_wuliu_icon"
+                    android:lineSpacingExtra="5dp"
+                    tools:text="快递公司：顺丰快递"
+                    android:textSize="14sp"
+                    android:textColor="@color/grey_102"
+                    />
+
+                <TextView
+                    android:id="@+id/cforderdetail_wuliu_orderno"
+                    android:layout_below="@id/cforderdetail_wuliu_company"
+                    android:layout_toRightOf="@id/cforderdetail_wuliu_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    tools:text="快递单号：34234636324234234"
+                    android:textSize="14sp"
+                    android:textColor="@color/grey_102"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <ImageView
+                android:id="@+id/cforderdetail_addrinfo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/location"/>
+
+            <TextView
+                android:id="@+id/cforderdetail_addrinfo_addr"
+                android:layout_toRightOf="@id/cforderdetail_addrinfo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/cforderdetail_addrinfo_icon"
+                android:lineSpacingExtra="5dp"
+                tools:text="史蒂芬森打发打发撒旦发生的色达色达使"
+                android:textSize="14sp"
+                android:textColor="@color/grey_102"
+                />
+
+            <TextView
+                android:id="@+id/cforderdetail_addrinfo_name"
+                android:layout_below="@id/cforderdetail_addrinfo_addr"
+                android:layout_toRightOf="@id/cforderdetail_addrinfo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                tools:text="张三"
+                android:textSize="14sp"
+                android:textColor="@color/grey_102"
+                />
+
+            <TextView
+                android:id="@+id/cforderdetail_addrinfo_phone"
+                android:layout_alignTop="@id/cforderdetail_addrinfo_name"
+                android:layout_toRightOf="@id/cforderdetail_addrinfo_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                tools:text="1338939393"
+                android:textSize="14sp"
+                android:textColor="@color/grey_102"
+                />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <ImageView
+                android:id="@+id/cforderdetail_prodinfo_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/prodinfo"/>
+
+            <TextView
+                android:id="@+id/cforderdetail_prodinfo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_prodinfo_icon"
+                tools:text="撒旦南山大佛"
+                android:textColor="@color/grey_102"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/cforderdetail_prodinfo_coverpic"
+                android:layout_width="79dp"
+                android:layout_height="79dp"
+                android:layout_alignParentRight="true"
+                tools:src="@mipmap/ic_launcher"
+                android:scaleType="fitXY"
+                android:layout_below="@id/cforderdetail_prodinfo_title"
+                android:layout_marginTop="15dp"/>
+            <TextView
+                android:id="@+id/cforderdetail_prodinfo_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_prodinfo_icon"
+                android:layout_below="@id/cforderdetail_prodinfo_title"
+                android:layout_toLeftOf="@id/cforderdetail_prodinfo_coverpic"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                tools:text="撒旦南山大佛"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cforderdetail_prodinfo_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_prodinfo_icon"
+                android:layout_below="@id/cforderdetail_prodinfo_intro"
+                android:layout_toLeftOf="@id/cforderdetail_prodinfo_coverpic"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                tools:text="规格：礼盒        数量：1件"
+                android:textColor="@color/grey_102"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/cforderdetail_prodinfo_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_prodinfo_icon"
+                android:layout_below="@id/cforderdetail_prodinfo_count"
+                android:layout_toLeftOf="@id/cforderdetail_prodinfo_coverpic"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                tools:text="￥123"
+                android:textColor="@color/grey_102"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/cforderdetail_createtime_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/shijian"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_createtime_icon"
+                android:text="下单时间"
+                android:textColor="@color/grey_102"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cforderdetail_createtime_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="2018-05-09 13:33"
+                android:textColor="@color/grey_102"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/cforderdetail_orderno_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/orderno"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_orderno_icon"
+                android:text="订单号"
+                android:textColor="@color/grey_102"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cforderdetail_orderno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="2342356345364747453454352"
+                android:textColor="@color/grey_102"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/cforderdetail_prodall_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/shangpinall"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_prodall_icon"
+                android:text="商品总额"
+                android:textColor="@color/grey_102"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cforderdetail_prodall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="￥234"
+                android:textColor="@color/grey_80"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_white"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <ImageView
+                android:id="@+id/cforderdetail_sendfee_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/shangpinall"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/cforderdetail_sendfee_icon"
+                android:text="运费"
+                android:textColor="@color/grey_102"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/cforderdetail_sendfee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text="￥0"
+                android:textColor="@color/grey_80"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_white"/>
+
+        <LinearLayout
+            android:id="@+id/cforderdetail_opt1_layou"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/cforderdetail_opt1_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="取消订单"
+                android:gravity="center"
+                android:textColor="@color/grey_333333"
+                android:background="@color/gray_239"
+                />
+            <TextView
+                android:id="@+id/cforderdetail_opt1_pay"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="付款"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/red_ff4949"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cforderdetail_opt4_layou"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/cforderdetail_opt4_suretake"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="确认收货"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@color/red_ff4949"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="48dp"
+    android:layout_height="48dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_grouporder_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="5dp"
+        tools:src="@mipmap/ic_launcher"
+        >
+    </de.hdodenhof.circleimageview.CircleImageView>
+    <TextView
+        android:id="@+id/iv_grouporder_tz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="团长"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="7dp"
+        android:background="@color/orange_239"
+        android:padding="1dp"/>
+</RelativeLayout>

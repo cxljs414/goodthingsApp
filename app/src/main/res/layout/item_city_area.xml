@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        android:id="@+id/item_city_area_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        tools:text="大兴区"
+        android:gravity="center_vertical"
+        android:textColor="@color/grey_333333"/>
+    <View
+        android:layout_below="@id/item_city_area_name"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_white"/>
+</RelativeLayout>

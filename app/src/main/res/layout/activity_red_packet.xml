@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/redpacket_root"
+    tools:context="com.goodthings.app.activity.redpacket.RedPacketActivity">
+
+    <include android:id="@+id/red_top" layout="@layout/top_bar"/>
+    <RelativeLayout
+        android:id="@+id/redpacket_bg"
+        android:layout_below="@id/red_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/redpacket_before_bg">
+
+        <TextView
+            android:id="@+id/redpacket_result"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="190dp"
+            android:layout_centerHorizontal="true"
+            android:text="今日已领取 0.88元 明日请再来"
+            android:gravity="center"
+            android:textSize="23sp"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/redpacket_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/redpacket_before_bt"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="100dp"
+            android:visibility="visible"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="一秒前提现\n现金3.45元"
+            android:gravity="center_vertical"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:background="@drawable/_6"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+</RelativeLayout>

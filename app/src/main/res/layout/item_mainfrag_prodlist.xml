@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:background="@color/white"
+    android:id="@+id/item_mainfrag_default_root">
+    <ImageView
+        android:id="@+id/item_mainfrag_default_image"
+        android:layout_width="112dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/item_mainfrag_default_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="70dp"
+        android:layout_toLeftOf="@id/item_mainfrag_default_image"
+        android:lineSpacingExtra="5dp"
+        android:lines="3"
+        android:text=""
+        android:textSize="15sp"
+        android:textColor="@color/grey_333333"/>
+    <RelativeLayout
+        android:layout_toRightOf="@id/item_home_use_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/item_mainfrag_default_title">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/item_mainfrag_default_headview"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/item_mainfrag_default_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/share"
+            android:drawablePadding="5dp"
+            android:textSize="11sp"
+            android:text="分享"/>
+
+
+        <TextView
+            android:id="@+id/item_mainfrag_default_collectcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@id/item_mainfrag_default_share"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/collected"
+            android:drawablePadding="5dp"
+            android:textSize="11sp"
+            android:text=""/>
+        <TextView
+            android:id="@+id/item_mainfrag_default_nickname"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/item_mainfrag_default_headview"
+            android:layout_toLeftOf="@id/item_mainfrag_default_collectcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="11sp"
+            android:text=""
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

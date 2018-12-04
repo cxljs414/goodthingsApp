@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.groupbuyorders.GroupBuyOrdersActivity">
+
+    <include android:id="@+id/grouporders_topbar" layout="@layout/top_bar"/>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/grouporders_tablayout"
+        android:layout_below="@id/grouporders_topbar"
+        android:layout_width="match_parent"
+        app:tabSelectedTextColor="@color/red_cc3333"
+        android:scrollIndicators="bottom"
+        app:tabIndicatorColor="@color/red_cc3333"
+        android:background="@color/white"
+        android:layout_height="40dp">
+
+    </android.support.design.widget.TabLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/grouporders_recyclerview"
+        android:layout_below="@id/grouporders_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/grouporder_dialog_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_gray"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/bg_white_corner_5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/grouporder_dialog_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="当前拼团已满，"
+                android:gravity="center"
+                android:textColor="@color/grey_333333"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="支付后可发起新拼团"
+                android:gravity="center"
+                android:textColor="@color/grey_102"
+                android:textSize="15sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:weightSum="2"
+                >
+                <TextView
+                    android:id="@+id/grouporder_dialog_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:text="取消"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_grey204_corner_5"/>
+                <TextView
+                    android:id="@+id/grouporder_dialog_sure"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:text="确认"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_redff4949_corner_5"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

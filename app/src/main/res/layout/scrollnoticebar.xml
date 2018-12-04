@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66px">
+
+    <ViewFlipper
+        android:id="@+id/id_scrollNoticeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8px"
+        android:flipInterval="5000">
+
+        <TextView
+            android:id="@+id/id_scrollNoticeContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#333333"
+            android:textSize="24px"
+            android:text="444444"/>
+    </ViewFlipper>
+
+
+</RelativeLayout>

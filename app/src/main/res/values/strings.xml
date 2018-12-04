@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">好事发生</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="loggin_welcome">欢迎来到好事发生</string>
+    <string name="next">下一步</string>
+    <string name="login">登录</string>
+    <string name="next_tip">点击下一步即表示您同意协议</string>
+    <string name="protocol">《服务协议》《隐私政策》</string>
+    <string name="other_login_way">其他登录方式</string>
+    <string name="login_msg">短信登录</string>
+    <string name="login_psd">密码登录</string>
+    <string name="forgetpsd">忘记密码</string>
+    <string name="input_phone">请输入电话号码</string>
+    <string name="input_psd">输入6-12位密码，不能有特殊符号</string>
+    <string name="login_nick">欢迎%1$s来到好事发生</string>
+    <string name="login_queryuser">正在识别用户</string>
+    <string name="sendVerifCode">发送验证码</string>
+    <string name="verif_code">验证码：%1$d</string>
+    <string name="verif_code_phone">已发送手机号：%1$s</string>
+    <string name="service_phone">遇到问题请拨打：400-0616263</string>
+    <string name="first_login">您是第一次登录，请设置密码</string>
+    <string name="newpsd">请设置新密码</string>
+    <string name="saveandlogin">保存并登录</string>
+    <string name="sendcodeagain">重新获取</string>
+    <string name="logining">正在登录</string>
+    <string name="updatepsd">正在修改密码</string>
+    <string name="uploadheadpic">上传头像</string>
+    <string name="regist">注册</string>
+    <string name="save">保存</string>
+    <string name="input_nickname">昵称由2-6个中文，英文字符组成</string>
+    <string name="regist_personinfo">个人信息完善</string>
+    <string name="saveing">保存个人信息</string>
+    <string name="registing">正在注册</string>
+    <string name="cancel">取消</string>
+    <string name="updatenow">马上更新</string>
+    <string name="noupdate">暂不更新</string>
+    <string name="save_pic">保存图片</string>
+    <string name="rqcode_tip">长按识别二维码查看图片内容</string>
+    <string name="loginregist">登录/注册</string>
+    <string name="topic">专题</string>
+    <string name="wallet_tip">金币满200自动兑换，转换汇率受每日运营收益影响(上下会有浮动)</string>
+    <string name="goldacount">金币账户(元)</string>
+    <string name="yestayjisuan">昨日最后金币（转）零钱结算：%1$s 金币= %1$s 元</string>
+    <string name="my_gold">我的金币 %1$s</string>
+    <string name="yestay_rate">昨日汇率 %1$s</string>
+    <string name="my_coupon">我的优惠券</string>
+    <string name="my_credit">信用管家</string>
+    <string name="item_gold_banacne">账户余额：%1$s</string>
+    <string name="hint_search_box">搜索</string>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_transparent"
+    >
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:id="@+id/select_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/select_take_photo"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/bg_corner_10"
+                android:text="拍照选取"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+
+
+            <Button
+                android:id="@+id/select_pick_photo"
+                android:layout_width="fill_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_corner_10"
+                android:text="相册选取"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/select_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/bg_corner_10"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textSize="18sp"
+            android:text="取消"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

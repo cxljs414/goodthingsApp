@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="160dp"
+    android:background="@drawable/bg_corner_10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_corner_10">
+
+        <TextView
+            android:id="@+id/dialog_changecity_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="您当前的位置在北京市是否切换城市"
+            android:textColor="@color/grey_353535"
+            />
+
+        <TextView
+            android:id="@+id/dialog_changecity_cancel"
+            android:layout_alignParentBottom="true"
+            android:layout_width="67dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="27dp"
+            android:gravity="center"
+            android:background="@drawable/bg_greya8_corner_5"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/dialog_changecity_sure"
+            android:layout_alignParentBottom="true"
+            android:layout_width="67dp"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="27dp"
+            android:text="切换"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_redff4949_corner_5"
+            />
+    </RelativeLayout>
+</LinearLayout>

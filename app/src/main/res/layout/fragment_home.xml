@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jwenfeng.library.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/home_pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.goodthings.app.view.MyScrollView
+            android:id="@+id/home_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/home_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <!--分类菜单-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_class_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <!--好事头条-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    >
+                    <ImageView
+                        android:id="@+id/home_class_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:id="@+id/home_class_more"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:lines="2"
+                        android:text="查看更多"/>
+                    <View
+                        android:id="@+id/home_class_more_view"
+                        android:layout_width="2dp"
+                        android:layout_height="35dp"
+                        android:layout_toLeftOf="@id/home_class_more"
+                        android:layout_centerVertical="true"
+                        android:background="@color/black"/>
+
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/home_class_img"
+                        android:layout_toLeftOf="@+id/home_class_more_view"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.goodthings.app.view.AutoVerticalViewView
+                            android:id="@+id/home_news_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </com.goodthings.app.view.AutoVerticalViewView>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_newuser_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="114dp"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="17dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/xinyonghu_banner"/>
+                </LinearLayout>
+
+                <!--后台推荐商品-->
+                <LinearLayout
+                    android:id="@+id/home_recommendgood_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="207dp"
+                    android:paddingBottom="17dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey">
+                        <ImageView
+                            android:id="@+id/home_remommend_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"/>
+                        <RelativeLayout
+                            android:id="@+id/home_remommend_userlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/home_remommend_headview"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="6dp"
+                                android:src="@mipmap/touxiang" />
+
+                            <TextView
+                                android:id="@+id/home_remommend_nickname"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/home_remommend_headview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="10sp"
+                                android:textColor="@color/white"
+                                android:text="风很的少年"
+                                />
+                            <TextView
+                                android:id="@+id/home_remommend_likecount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="35dp"
+                                android:textColor="@color/white"
+                                android:textSize="10sp"
+                                android:text="204"/>
+                            <ImageView
+                                android:id="@+id/home_remommend_likecheckbox"
+                                android:layout_toLeftOf="@id/home_remommend_likecount"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="5dp"
+                                android:src="@mipmap/like_yes"
+                                />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/home_remommend_goodname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/home_remommend_userlayout"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:lines="1"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:text="黑色矿泉水|黑色的人请喝黑色的水"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--格调生活-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_business_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:text="直播"
+                        android:textColor="#FF353535"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:id="@+id/home_live_more"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/more_bt"/>
+                </RelativeLayout>
+                <!--直播-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_live_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <!--私藏珍品-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:text="私藏珍品"
+                        android:textColor="#FF353535"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:id="@+id/home_favorite_more"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/more_bt"/>
+                </RelativeLayout>
+                <!--私藏珍品列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_favorite_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <!--随时用-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:text="随时用"
+                        android:textColor="#FF353535"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+                    <ImageView
+                        android:id="@+id/home_use_more"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/more_bt"/>
+                </RelativeLayout>
+                <!--随时用列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_use_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+
+                <!--猜你喜欢-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginBottom="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:text="猜你喜欢"
+                        android:textColor="#FF353535"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+                </RelativeLayout>
+                <!--猜你喜欢列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/home_like_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </com.goodthings.app.view.MyScrollView>
+
+    </com.jwenfeng.library.pulltorefresh.PullToRefreshLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/home_float_gotop"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/float_gotop"
+        app:borderWidth="0dp"
+        app:fabSize="mini"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"/>
+</RelativeLayout>

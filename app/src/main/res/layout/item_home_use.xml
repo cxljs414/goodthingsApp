@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:id="@+id/item_home_use_root">
+
+    <com.goodthings.app.view.RoundAngleImageView
+        android:id="@+id/item_home_use_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="15dp"/>
+    <TextView
+        android:id="@+id/item_home_use_title"
+        android:layout_toRightOf="@id/item_home_use_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="建立圣诞节分厘卡见识到了放假啊"/>
+    <RelativeLayout
+        android:id="@+id/home_use_userlayout"
+        android:layout_toRightOf="@id/item_home_use_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/home_use_headview"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/home_use_nickname"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/home_use_headview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="10sp"
+            android:text="风很的少年"
+            />
+        <TextView
+            android:id="@+id/home_use_likecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:text="204"/>
+        <ImageView
+            android:id="@+id/home_use_likecheckbox"
+            android:layout_toLeftOf="@id/home_use_likecount"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/like_yes"
+            />
+    </RelativeLayout>
+</RelativeLayout>

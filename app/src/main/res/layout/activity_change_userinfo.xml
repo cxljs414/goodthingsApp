@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.userinfo.ChangeUserinfoActivity">
+
+    <include layout="@layout/top_bar" android:id="@+id/userinfo_topbar"/>
+
+    
+    <TextView
+        android:id="@+id/userinfo_save"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/red_ff4949"
+        android:layout_alignParentBottom="true"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="16sp"
+        />
+    <LinearLayout
+        android:layout_below="@id/userinfo_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/com_margin"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="头像"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userinfo_headimage"
+                android:layout_width="81dp"
+                android:layout_height="81dp"
+                tools:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:textSize="13sp"
+                android:textColor="@color/grey_153"
+                android:text="点击更换头像"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/public_background_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/com_margin"
+            android:paddingRight="@dimen/com_margin"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="昵称"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/userinfo_nickname_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_border_grey_corner_5"
+                android:hint="昵称由2-6个中文、英文字符组成"
+                android:singleLine="true"
+                android:maxLength="6"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/public_background_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/com_margin"
+            android:paddingRight="@dimen/com_margin"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="性别"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/userinfo_sex_group"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/userinfo_sex_nan"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="男"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:background="@drawable/tag_bg_5"
+                    android:textColor="@drawable/text_color"/>
+
+                <RadioButton
+                    android:id="@+id/userinfo_sex_nv"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:button="@null"
+                    android:text="女"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:background="@drawable/tag_bg_5"
+                    android:textColor="@drawable/text_color"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/public_background_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/com_margin"
+            android:paddingRight="@dimen/com_margin"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="性别"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <RadioGroup
+                android:id="@+id/userinfo_age_group"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/userinfo_age_90"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="90后"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:background="@drawable/tag_bg_5"
+                    android:textColor="@drawable/text_color"/>
+
+                <RadioButton
+                    android:id="@+id/userinfo_age_80"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:text="80后"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:background="@drawable/tag_bg_5"
+                    android:textColor="@drawable/text_color"/>
+                <RadioButton
+                    android:id="@+id/userinfo_age_70"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:text="70后"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:background="@drawable/tag_bg_5"
+                    android:textColor="@drawable/text_color"/>
+                <RadioButton
+                    android:id="@+id/userinfo_age_60"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:button="@null"
+                    android:text="60后+"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:background="@drawable/tag_bg_5"
+                    android:textColor="@drawable/text_color"/>
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+    
+</RelativeLayout>

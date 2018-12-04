@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.addrlist.AddrListActivity">
+
+    <include android:id="@+id/citylist_topbar" layout="@layout/top_bar"/>
+
+    <TextView
+        android:id="@+id/addrlist_add"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/red_ff4949"
+        android:layout_alignParentBottom="true"
+        android:text="+新增联系方式和地址"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/addrlist_recyclerview"
+        android:layout_below="@id/citylist_topbar"
+        android:layout_above="@id/addrlist_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>

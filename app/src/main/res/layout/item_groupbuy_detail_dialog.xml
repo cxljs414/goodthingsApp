@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/com_margin"
+    android:paddingRight="@dimen/com_margin"
+    android:paddingTop="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_groupbuy_detail_dialog_headpic"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/item_groupbuy_detail_dialog_ctbt"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_redff4949_corner_5"
+        android:text="参团"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        />
+    <LinearLayout
+        android:layout_toLeftOf="@id/item_groupbuy_detail_dialog_ctbt"
+        android:layout_toRightOf="@id/item_groupbuy_detail_dialog_headpic"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_groupbuy_detail_dialog_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:singleLine="true"
+            android:text="撒地方撒地方"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/item_groupbuy_detail_dialog_downtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="剩余16:32:23"
+            android:textSize="11sp"
+            android:textColor="@color/grey_102"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/public_background_color"/>
+</RelativeLayout>

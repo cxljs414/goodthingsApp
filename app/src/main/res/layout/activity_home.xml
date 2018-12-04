@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.home.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/home_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/home_login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/login"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+        <LinearLayout
+            android:id="@+id/home_login_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/home_use_headview"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/default_headpic" />
+
+            <TextView
+                android:id="@+id/home_use_nickname"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/home_use_headview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="风很的少年"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_menu"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:scaleType="center"
+                android:src="@mipmap/menu_nomal"/>
+            <ImageView
+                android:id="@+id/home_menu_biaoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/red_point"
+                android:visibility="visible"/>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/home_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/home_menu"
+            app:srcCompat="@mipmap/icon_search"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/home_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="北京"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/home_search"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@mipmap/icon_location"
+            android:drawablePadding="5dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/footbar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="vertical"
+        android:background="@color/transparent"
+        android:visibility="visible">
+
+        <RadioGroup
+            android:id="@+id/home_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <RadioButton
+                android:id="@+id/rb_shouye"
+                style="@style/radioBt"
+                android:checked="true"
+                android:drawableTop="@drawable/rb_home_select"
+                android:text="首页"
+                android:textColor="@drawable/rb_text_select" />
+
+            <RadioButton
+                android:visibility="visible"
+                android:id="@+id/rb_shangcheng"
+                style="@style/radioBt"
+                android:drawableTop="@drawable/rb_yue_select"
+                android:text="商城"
+                android:textColor="@drawable/rb_text_select" />
+            <RadioButton
+                style="@style/radioBt" />
+            <RadioButton
+                android:visibility="visible"
+                android:id="@+id/rb_msg"
+                style="@style/radioBt"
+                android:drawableTop="@drawable/rb_msg_select"
+                android:text="约见"
+                android:textColor="@drawable/rb_text_select" />
+
+            <RadioButton
+                android:id="@+id/rb_mine"
+                style="@style/radioBt"
+                android:drawableTop="@drawable/rb_person_select"
+                android:text="我的"
+                android:textColor="@drawable/rb_text_select" />
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/fabu_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/fabu_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10px"
+                android:text="发布"
+                android:textColor="#999999"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/fabu_floatbt"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:src="@mipmap/fabu_add"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_above="@id/footbar"
+        android:layout_below="@id/home_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+    </FrameLayout>
+
+</RelativeLayout>

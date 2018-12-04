@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.aftersaledetail.AfterSaleDetailActivity">
+
+    <include layout="@layout/top_bar" android:id="@+id/aftersale_topbar"/>
+
+    <FrameLayout
+        android:id="@+id/aftersale_framelayout"
+        android:layout_below="@id/aftersale_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+   <!-- <LinearLayout
+        android:layout_below="@id/aftersale_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等待商家处理售后申请"/>
+
+        </LinearLayout>
+    </LinearLayout>-->
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goodthings.app.activity.comments.AllCommentsActivity">
+
+    <include layout="@layout/top_bar" android:id="@+id/allcomments_topbar"/>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_below="@id/allcomments_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <!--标题-->
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/public_background_color"
+            android:fitsSystemWindows="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:paddingLeft="@dimen/com_margin"
+                    android:paddingRight="@dimen/com_margin"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:textColor="@color/grey_69"
+                    android:textSize="16sp"
+                    android:text="精彩评论"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/allcomments_good_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="@dimen/com_margin"
+                android:paddingRight="@dimen/com_margin"
+                android:layout_marginTop="1dp"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                android:textColor="@color/grey_69"
+                android:textSize="16sp"
+                android:text="最新评论"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/allcomments_new_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

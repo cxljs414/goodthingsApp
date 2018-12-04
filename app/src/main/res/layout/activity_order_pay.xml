@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/orderpay_root">
+    <include android:id="@+id/orderpay_topbar" layout="@layout/top_bar"/>
+    <LinearLayout
+        android:layout_below="@id/orderpay_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        tools:context="com.goodthings.app.activity.orderpay.OrderPayActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/orderpay_address_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/next_bt"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/orderpay_address_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/orderpay_address"/>
+
+
+
+            <RelativeLayout
+                android:id="@+id/orderpay_address_no"
+                android:layout_toRightOf="@id/orderpay_address_icon"
+                android:layout_toLeftOf="@id/orderpay_address_next"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:visibility="visible">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请填写联系方式和地址"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orderpay_address_yes"
+                android:layout_toRightOf="@id/orderpay_address_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/orderpay_address_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="吴晓静"
+                    android:textSize="14sp"
+                    android:textColor="@color/grey_333333"
+                    />
+
+                <TextView
+                    android:id="@+id/orderpay_address_phone"
+                    android:layout_toRightOf="@id/orderpay_address_name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="12545848965"
+                    android:textSize="14sp"
+                    android:textColor="@color/grey_333333"
+                    />
+
+                <TextView
+                    android:id="@+id/orderpay_address_detail"
+                    android:layout_below="@id/orderpay_address_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="北京市西三环红木街"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey_102"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_ffe9e9ea"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/orderpay_prod_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/orderpay_prod"/>
+
+
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/orderpay_prod_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/orderpay_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_333333"
+                    android:textSize="15sp"
+                    tools:text="x 1"/>
+                <TextView
+                    android:id="@+id/orderpay_title"
+                    android:layout_toLeftOf="@id/orderpay_count"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="四川原产自酿纯高粱酒"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_333333"
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_ffe9e9ea"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/orderpay_pay_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/orderpay_pay"/>
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/orderpay_pay_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center_vertical"
+                android:visibility="visible">
+                <LinearLayout
+                    android:id="@+id/orderpay_pay_layou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:id="@+id/orderpay_realpay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/red_ff4949"
+                        android:textSize="15sp"
+                        tools:text="￥68元"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/grey_153"
+                        android:textSize="12sp"
+                        android:text="免邮费"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_toLeftOf="@id/orderpay_pay_layou"
+                    android:layout_marginRight="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="实付款"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/grey_333333"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_ffe9e9ea"/>
+
+        <TextView
+            android:id="@+id/orderpay_commit"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_redff4949_corner_5"
+            android:gravity="center"
+            android:text="立即支付"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/orderpay_dialog_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_gray"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/bg_white_corner_5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="支付成功"
+                    android:textColor="@color/grey_333333"/>
+
+                <ImageView
+                    android:id="@+id/orderpay_dialog_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey_a8a8a8"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="感谢您对预购项目的支持"
+                android:gravity="center"
+                android:textColor="@color/grey_333333"
+                android:textSize="17sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="您还可以分享给朋友，最高可获得100元的红包奖励"
+                android:gravity="center"
+                android:textColor="@color/grey_102"
+                android:textSize="13sp"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                >
+                <TextView
+                    android:id="@+id/orderpay_dialog_submmit"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_centerInParent="true"
+                    android:text="分享最高赚100元红包"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_redff4949_corner_5"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginBottom="30dp">
+                <TextView
+                    android:id="@+id/orderpay_red_rule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:text="查看赚红包规则介绍"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey_102"/>
+
+                <TextView
+                    android:id="@+id/orderpay_orderdetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="34dp"
+                    android:layout_alignParentRight="true"
+                    android:text="查看订单详情"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey_102"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/orderpay_red_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_gray"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/orderpay_red_root_sub1"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:paddingTop="5dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/bg_redff4949_corner_5"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="分享成功"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:id="@+id/orderpay_red_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/orderpay_red_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/red_open"
+                android:layout_marginTop="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="开启送现金"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="27sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="最高100元\n 即时到账，可提现"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:layout_marginBottom="30dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/orderpay_red_root_sub2"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:paddingTop="5dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/bg_redff4949_corner_5"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/orderpay_red_sub2_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/orderpay_red_sub2_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="恭喜获得"
+                android:textSize="25sp"
+                android:textColor="@color/gold"/>
+
+            <TextView
+                android:id="@+id/orderpay_red_sub2_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                tools:text="1.3元"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="请到“个人” - “我的钱包”中查看"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                />
+
+            <TextView
+                android:id="@+id/orderpay_red_sub2_share"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="分享再得50金币"
+                android:gravity="center"
+                android:textColor="@color/grey_333333"
+                android:textSize="15sp"
+                android:background="@drawable/bg_white_corner_5"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="满足条件后，金币每天会自动兑换成现金存入“我的钱包”金币账户中"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:layout_marginBottom="30dp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/orderpay_contract_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_gray"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="337dp"
+            android:layout_height="333dp"
+            android:layout_centerInParent="true"
+            android:elevation="8dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/bg_white_corner_5">
+
+            <RelativeLayout
+                android:id="@+id/orderpay_contract_top"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="分享赚红包规则"
+                    android:textColor="@color/grey_333333"/>
+
+                <ImageView
+                    android:id="@+id/orderpay_contract_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_below="@id/orderpay_contract_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/orderpay_contract_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:lineSpacingExtra="3dp"
+                        />
+                </LinearLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+

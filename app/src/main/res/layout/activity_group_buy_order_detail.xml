@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/grouporder_detail_root"
+    tools:context="com.goodthings.app.activity.groupbuyordersdetail.GroupBuyOrderDetailActivity">
+
+    <include layout="@layout/top_bar" android:id="@+id/grouporder_detail_topbar"/>
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/grouporder_detail_topbar"
+        android:visibility="visible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/gporderdetail_toptip"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/gray_239"
+                tools:text="58分11秒后未支付，此订单将自动关闭"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:lines="1"
+                android:textColor="@color/gray_89"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:id="@+id/gporderdetail_progress_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:background="@color/white">
+                <LinearLayout
+                    android:id="@+id/gporderdetail_state1_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:gravity="center"
+                        android:weightSum="2"
+                        >
+
+                        <TextView
+                            android:id="@+id/gporderdetail_state1_share"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_redff4949_corner_5"
+                            android:text="邀请好友拼团"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+
+                        <TextView
+                            android:id="@+id/gporderdetail_state1_prod"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_grey204_corner_5"
+                            android:layout_marginLeft="15dp"
+                            android:text="返回商品页面"
+                            android:gravity="center"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/public_background_color"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="17dp"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/com_margin">
+                        <TextView
+                            android:id="@+id/gporderdetail_state1_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="仅剩1个名额，"
+                            android:textColor="@color/grey_102"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            />
+                        <TextView
+                            android:id="@+id/gporderdetail_state1_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="23:34:23后结束"
+                            android:textColor="@color/grey_102"
+                            android:gravity="center"
+                            android:textSize="13sp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gporderdetail_statesuccess_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="37dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/grey_333333"
+                        android:text="拼团成功啦！"
+                        />
+                    <TextView
+                        android:id="@+id/gporderdetail_statesuccess_top_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="23dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey_333333"
+                        android:text="商家正在努力发货，请耐心等待！"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gporderdetail_statefail_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:textSize="17sp"
+                        android:textColor="@color/grey_333333"
+                        android:text="拼团失败！"
+                        />
+                    <TextView
+                        android:id="@+id/gporderdetail_statefail_again"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="23dp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_redff4949_corner_5"
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:text="再次发起拼团"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/com_margin"
+                    android:layout_marginRight="@dimen/com_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp">
+                    <com.zhy.view.flowlayout.TagFlowLayout
+                        android:id="@+id/gporderdetail_group_tagflow"
+                        app:tag_gravity="center"
+                        android:clipToPadding="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </com.zhy.view.flowlayout.TagFlowLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/gporderdetail_step"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="57dp"
+                    android:layout_marginRight="57dp"
+                    android:src="@mipmap/group_order1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/gporderdetail_wuliu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey_white"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+                        <ImageView
+                            android:id="@+id/gporderdetail_wuliu_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@mipmap/wuliuxinxi"/>
+
+                        <TextView
+                            android:id="@+id/gporderdetail_wuliu_company"
+                            android:layout_toRightOf="@id/gporderdetail_wuliu_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/gporderdetail_wuliu_icon"
+                            android:lineSpacingExtra="5dp"
+                            tools:text="快递公司：顺丰快递"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey_102"
+                            />
+
+                        <TextView
+                            android:id="@+id/gporderdetail_wuliu_orderno"
+                            android:layout_below="@id/gporderdetail_wuliu_company"
+                            android:layout_toRightOf="@id/gporderdetail_wuliu_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            tools:text="快递单号：34234636324234234"
+                            android:textSize="14sp"
+                            android:textColor="@color/grey_102"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/next_bt"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+                    <ImageView
+                        android:id="@+id/gporderdetail_addrinfo_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/location"/>
+
+                    <TextView
+                        android:id="@+id/gporderdetail_addrinfo_addr"
+                        android:layout_toRightOf="@id/gporderdetail_addrinfo_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/gporderdetail_addrinfo_icon"
+                        android:lineSpacingExtra="5dp"
+                        tools:text="史蒂芬森打发打发撒旦发生的色达色达使"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey_102"
+                        />
+
+                    <TextView
+                        android:id="@+id/gporderdetail_addrinfo_name"
+                        android:layout_below="@id/gporderdetail_addrinfo_addr"
+                        android:layout_toRightOf="@id/gporderdetail_addrinfo_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        tools:text="张三"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey_102"
+                        />
+
+                    <TextView
+                        android:id="@+id/gporderdetail_addrinfo_phone"
+                        android:layout_alignTop="@id/gporderdetail_addrinfo_name"
+                        android:layout_toRightOf="@id/gporderdetail_addrinfo_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        tools:text="1338939393"
+                        android:textSize="14sp"
+                        android:textColor="@color/grey_102"
+                        />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+                    <ImageView
+                        android:id="@+id/gporderdetail_prodinfo_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/prodinfo"/>
+
+                    <TextView
+                        android:id="@+id/gporderdetail_prodinfo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_prodinfo_icon"
+                        tools:text="撒旦南山大佛"
+                        android:textColor="@color/grey_102"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/gporderdetail_prodinfo_coverpic"
+                        android:layout_width="79dp"
+                        android:layout_height="79dp"
+                        android:layout_alignParentRight="true"
+                        tools:src="@mipmap/ic_launcher"
+                        android:scaleType="fitXY"
+                        android:layout_below="@id/gporderdetail_prodinfo_title"
+                        android:layout_marginTop="15dp"/>
+                    <TextView
+                        android:id="@+id/gporderdetail_prodinfo_intro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_prodinfo_icon"
+                        android:layout_below="@id/gporderdetail_prodinfo_title"
+                        android:layout_toLeftOf="@id/gporderdetail_prodinfo_coverpic"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        tools:text="撒旦南山大佛"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/gporderdetail_prodinfo_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_prodinfo_icon"
+                        android:layout_below="@id/gporderdetail_prodinfo_intro"
+                        android:layout_toLeftOf="@id/gporderdetail_prodinfo_coverpic"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        tools:text="规格：礼盒        数量：1件"
+                        android:textColor="@color/grey_102"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/gporderdetail_prodinfo_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_prodinfo_icon"
+                        android:layout_below="@id/gporderdetail_prodinfo_count"
+                        android:layout_toLeftOf="@id/gporderdetail_prodinfo_coverpic"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        tools:text="￥123"
+                        android:textColor="@color/grey_102"
+                        android:textSize="13sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/gporderdetail_createtime_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/shijian"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_createtime_icon"
+                        android:text="下单时间"
+                        android:textColor="@color/grey_102"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/gporderdetail_createtime_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="2018-05-09 13:33"
+                        android:textColor="@color/grey_102"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/gporderdetail_orderno_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/orderno"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_orderno_icon"
+                        android:text="订单号"
+                        android:textColor="@color/grey_102"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/gporderdetail_orderno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="2342356345364747453454352"
+                        android:textColor="@color/grey_102"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/gporderdetail_prodall_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/shangpinall"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_prodall_icon"
+                        android:text="商品总额"
+                        android:textColor="@color/grey_102"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/gporderdetail_prodall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="￥234"
+                        android:textColor="@color/grey_80"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_white"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/gporderdetail_sendfee_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/shangpinall"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/gporderdetail_sendfee_icon"
+                        android:text="运费"
+                        android:textColor="@color/grey_102"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/gporderdetail_sendfee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        tools:text="￥0"
+                        android:textColor="@color/grey_80"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_white"/>
+
+                <LinearLayout
+                    android:id="@+id/gporderdetail_opt1_layou"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+                    <TextView
+                        android:id="@+id/gporderdetail_opt1_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="取消订单"
+                        android:gravity="center"
+                        android:textColor="@color/grey_333333"
+                        android:background="@color/gray_239"
+                        />
+                    <TextView
+                        android:id="@+id/gporderdetail_opt1_pay"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="付款"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@color/red_ff4949"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/gporderdetail_opt4_layou"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/gporderdetail_opt1_sqsh"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="申请售后"
+                        android:gravity="center"
+                        android:textColor="@color/grey_333333"
+                        android:background="@color/gray_239"
+                        />
+                    <TextView
+                        android:id="@+id/gporderdetail_opt1_shjd"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="售后进度"
+                        android:gravity="center"
+                        android:textColor="@color/grey_333333"
+                        android:background="@color/gray_239"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:id="@+id/gporderdetail_opt4_suretake"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="确认收货"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@color/red_ff4949"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:id="@+id/gporderdetail_opt4_addcomment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="评价"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@color/red_ff4949"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:id="@+id/gporderdetail_opt4_addcommented"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="已评价"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:background="@color/gray_239"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+
+                <!--<LinearLayout
+                    android:id="@+id/gporderdetail_wl_layou"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:visibility="visible">
+                    <TextView
+                        android:id="@+id/gporderdetail_wl"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="查看物流"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:background="@color/red_ff4949"
+                        />
+                </LinearLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/grouporder_detail_state_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/com_margin"
+        android:layout_below="@id/grouporder_detail_topbar"
+        android:src="@mipmap/pintuanchenggong"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/grouporder_detail_dialog_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/alpha_gray"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:elevation="8dp"
+            android:paddingTop="5dp"
+            android:background="@drawable/bg_white_corner_5">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:id="@+id/grouporder_detail_dialog_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/close"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="17dp"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="当前拼团已满，"
+                android:gravity="center"
+                android:textColor="@color/grey_333333"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="支付后可发起新拼团"
+                android:gravity="center"
+                android:textColor="@color/grey_102"
+                android:textSize="15sp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:weightSum="2"
+                >
+                <TextView
+                    android:id="@+id/grouporder_detail_dialog_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:text="取消"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_grey204_corner_5"/>
+                <TextView
+                    android:id="@+id/grouporder_detail_dialog_sure"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:text="确认"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/bg_redff4949_corner_5"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

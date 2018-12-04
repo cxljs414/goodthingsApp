@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="@dimen/com_margin"
+    android:paddingRight="@dimen/com_margin"
+    android:background="@color/white">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/item_groupcomment_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        tools:src="@mipmap/ic_launcher"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_groupcomment_image"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/item_groupcomment_zan_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:button="@null"
+                android:drawableRight="@drawable/rb_zan_select"
+                android:textColor="@drawable/rb_text_red_select"
+                android:drawablePadding="5dp"
+                tools:text="233"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/item_groupcomment_nickname"
+                android:layout_toLeftOf="@id/item_groupcomment_zan_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                tools:text="一叶知秋"
+                android:textColor="@color/grey_333333"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_groupcomment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:text="2018-07-12"
+            android:textSize="11sp"
+            android:textColor="@color/grey_102"/>
+
+        <TextView
+            android:id="@+id/item_groupcomment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            tools:text="极乐世界地方啦精神分裂就撒了地方加拉斯的放假了阿里的经适房垃圾撒地方"
+            android:textSize="15sp"
+            android:textColor="@color/grey_333333"
+            />
+        <TextView
+            android:id="@+id/item_groupcomment_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/grey_245"
+            android:padding="5dp"
+            android:textColor="@color/grey_153"
+            tools:text="洋洋回复一叶知秋：过奖了，谢谢加拉斯的街坊邻居加拉斯的解放了喀什酱豆腐垃圾啊乐山大佛"/>
+    </LinearLayout>
+
+</RelativeLayout>
